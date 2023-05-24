@@ -12,7 +12,7 @@
 
   <meta name="author" content="Lic. Diego Medardo Saavedra García Mg. Sc.">
   <meta name="dcterms.date" content="2023-05-24">
-  <title>Desarrollo Web para Integraciones</title>
+  <title>Ejercicios con JavaScript</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,6 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -329,8 +394,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Desarrollo Web para Integraciones</h1>
-  <p class="subtitle">Actualización del Syllabus</p>
+  <h1 class="title">Ejercicios con JavaScript</h1>
+  <p class="subtitle">Desarrollo Web para Integraciones</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -345,17 +410,326 @@ Lic. Diego Medardo Saavedra García Mg. Sc.
 <nav role="doc-toc"> 
 <h2 id="toc-title">Tabla de contenidos</h2>
 <ul>
-<li><a href="#/actualización-del-pensum-de-estudios" id="/toc-actualización-del-pensum-de-estudios">Actualización del Pensum de Estudios:</a></li>
+<li><a href="#/ejercicios-con-javascript" id="/toc-ejercicios-con-javascript">Ejercicios con JavaScript</a>
+<ul>
+<li><a href="#/tipos-de-datos-primitivos" id="/toc-tipos-de-datos-primitivos">Tipos de Datos Primitivos:</a></li>
+<li><a href="#/typeof" id="/toc-typeof">TypeOf:</a></li>
+<li><a href="#/variables-declaración-inicialización-console.log" id="/toc-variables-declaración-inicialización-console.log">Variables, Declaración, Inicialización, console.log:</a></li>
+<li><a href="#/funciones" id="/toc-funciones">Funciones</a></li>
+<li><a href="#/scope-scope-local-scope-global." id="/toc-scope-scope-local-scope-global.">Scope, Scope Local, Scope Global.</a></li>
+<li><a href="#/hoisting-hoisting-en-variables-hoisting-en-funciones" id="/toc-hoisting-hoisting-en-variables-hoisting-en-funciones">Hoisting, hoisting en variables, hoisting en funciones:</a></li>
+<li><a href="#/coerción-truthy-y-falsy" id="/toc-coerción-truthy-y-falsy">Coerción, Truthy y Falsy:</a></li>
+<li><a href="#/condicionales-else-else-if" id="/toc-condicionales-else-else-if">Condicionales, else, else if:</a></li>
+<li><a href="#/operadores" id="/toc-operadores">Operadores:</a></li>
+<li><a href="#/switch" id="/toc-switch">Switch:</a></li>
+<li><a href="#/loops" id="/toc-loops">Loops:</a></li>
+<li><a href="#/arrays" id="/toc-arrays">Arrays:</a></li>
+<li><a href="#/métodos" id="/toc-métodos">Métodos:</a></li>
+<li><a href="#/objects" id="/toc-objects">Objects:</a></li>
+<li><a href="#/tarea" id="/toc-tarea">Tarea</a></li>
+</ul></li>
 </ul>
 </nav>
 </section>
-<section id="actualización-del-pensum-de-estudios" class="title-slide slide level1 center">
-<h1>Actualización del Pensum de Estudios:</h1>
+<section>
+<section id="ejercicios-con-javascript" class="title-slide slide level1 center">
+<h1>Ejercicios con JavaScript</h1>
+<p>A continuación se presentan una serie de ejercicios para reforzar lo que hemos aprendido acerca del lenguaje JavaScript.</p>
+</section>
+<section id="tipos-de-datos-primitivos" class="slide level2">
+<h2>Tipos de Datos Primitivos:</h2>
+<p>Los tipos de datos primitivos en JavaScript incluyen números, cadenas de texto y valores booleanos (verdadero o falso).</p>
+<p><strong>Código:</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {javascript} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>// Ejemplo de números</span>
+<span id="cb1-2"><a href="#cb1-2"></a>let numero = 10;</span>
+<span id="cb1-3"><a href="#cb1-3"></a>console.log(numero);</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a>// Ejemplo de cadena de texto</span>
+<span id="cb1-6"><a href="#cb1-6"></a>let texto = "Hola, mundo!";</span>
+<span id="cb1-7"><a href="#cb1-7"></a>console.log(texto);</span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a>// Ejemplo de valor booleano</span>
+<span id="cb1-10"><a href="#cb1-10"></a>let booleano = true;</span>
+<span id="cb1-11"><a href="#cb1-11"></a>console.log(booleano);</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="typeof" class="slide level2">
+<h2>TypeOf:</h2>
+<p>El operador typeof se utiliza para determinar el tipo de dato de una variable.</p>
+<p><strong>Código:</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {javascript} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>let numero = 10;</span>
+<span id="cb2-2"><a href="#cb2-2"></a>let texto = "Hola, mundo!";</span>
+<span id="cb2-3"><a href="#cb2-3"></a>let booleano = true;</span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a>console.log(typeof numero);   // Devuelve "number"</span>
+<span id="cb2-6"><a href="#cb2-6"></a>console.log(typeof texto);    // Devuelve "string"</span>
+<span id="cb2-7"><a href="#cb2-7"></a>console.log(typeof booleano); // Devuelve "boolean"</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="variables-declaración-inicialización-console.log" class="slide level2">
+<h2>Variables, Declaración, Inicialización, console.log:</h2>
+<p>En JavaScript, se pueden declarar variables utilizando la palabra clave let o const. La inicialización asigna un valor a la variable y console.log se utiliza para imprimir el valor en la consola.</p>
+<p><strong>Código:</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {javascript} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>let numero; // Declaración de variable</span>
+<span id="cb3-2"><a href="#cb3-2"></a>numero = 10; // Inicialización de variable</span>
+<span id="cb3-3"><a href="#cb3-3"></a>console.log(numero); // Imprime el valor de la variable en la consola</span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a>const texto = "Hola, mundo!"; // Declaración e inicialización de una constante</span>
+<span id="cb3-6"><a href="#cb3-6"></a>console.log(texto);</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="funciones" class="slide level2">
+<h2>Funciones</h2>
+<p>Las funciones son bloques de código reutilizables que pueden recibir argumentos, realizar operaciones y devolver un valor utilizando la declaración return.</p>
+<p><strong>Código:</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {javascript} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href="#cb4-1"></a>// Function Declaration</span>
+<span id="cb4-2"><a href="#cb4-2"></a>function suma(a, b) {</span>
+<span id="cb4-3"><a href="#cb4-3"></a>  return a + b;</span>
+<span id="cb4-4"><a href="#cb4-4"></a>}</span>
+<span id="cb4-5"><a href="#cb4-5"></a></span>
+<span id="cb4-6"><a href="#cb4-6"></a>console.log(suma(2, 3)); // Llamada a una función</span>
+<span id="cb4-7"><a href="#cb4-7"></a></span>
+<span id="cb4-8"><a href="#cb4-8"></a>// Function Expression (Funciones anónimas)</span>
+<span id="cb4-9"><a href="#cb4-9"></a>const resta = function(a, b) {</span>
+<span id="cb4-10"><a href="#cb4-10"></a>  return a - b;</span>
+<span id="cb4-11"><a href="#cb4-11"></a>};</span>
+<span id="cb4-12"><a href="#cb4-12"></a></span>
+<span id="cb4-13"><a href="#cb4-13"></a>console.log(resta(5, 2)); // Llamada a una función</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="scope-scope-local-scope-global." class="slide level2">
+<h2>Scope, Scope Local, Scope Global.</h2>
+<p>El scope determina la accesibilidad y visibilidad de las variables en diferentes partes del código. Las variables declaradas dentro de una función tienen alcance local, mientras que las variables declaradas fuera de cualquier función tienen alcance global.</p>
+<p><strong>Código:</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {javascript} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a href="#cb5-1"></a>// Scope Local</span>
+<span id="cb5-2"><a href="#cb5-2"></a>function suma(a, b) {</span>
+<span id="cb5-3"><a href="#cb5-3"></a>  const resultado = a + b;</span>
+<span id="cb5-4"><a href="#cb5-4"></a>  console.log(resultado); // La variable resultado solo es accesible dentro de la función</span>
+<span id="cb5-5"><a href="#cb5-5"></a>}</span>
+<span id="cb5-6"><a href="#cb5-6"></a></span>
+<span id="cb5-7"><a href="#cb5-7"></a>suma(2, 3);</span>
+<span id="cb5-8"><a href="#cb5-8"></a></span>
+<span id="cb5-9"><a href="#cb5-9"></a>// Scope Global</span>
+<span id="cb5-10"><a href="#cb5-10"></a>const mensaje = "Hola, mundo!"; // La variable mensaje es global</span>
+<span id="cb5-11"><a href="#cb5-11"></a></span>
+<span id="cb5-12"><a href="#cb5-12"></a>function imprimirMensaje() {</span>
+<span id="cb5-13"><a href="#cb5-13"></a>  console.log(mensaje); // La función puede acceder a la variable global</span>
+<span id="cb5-14"><a href="#cb5-14"></a>}</span>
+<span id="cb5-15"><a href="#cb5-15"></a></span>
+<span id="cb5-16"><a href="#cb5-16"></a>imprimirMensaje();</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="hoisting-hoisting-en-variables-hoisting-en-funciones" class="slide level2">
+<h2>Hoisting, hoisting en variables, hoisting en funciones:</h2>
+<p>El Hoisting es un comportamiento en JavaScript en el cual las declaraciones de variables y funciones se mueven al inicio del ámbito en el que están definidas durante la fase de compilación del código.</p>
+<p><strong>Hoisting en variables:</strong></p>
+<p>Las declaraciones de variables se mueven al inicio del ámbito, pero no las inicializaciones.</p>
+<p><strong>Código:</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource {javascript} number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a href="#cb6-1"></a></span>
+<span id="cb6-2"><a href="#cb6-2"></a>console.log(nombre); // Undefined</span>
+<span id="cb6-3"><a href="#cb6-3"></a>var nombre = "Juan";</span>
+<span id="cb6-4"><a href="#cb6-4"></a>console.log(nombre); // "Juan"</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Hoisting en funciones:</strong></p>
+<p>Las declaraciones de funciones completas se mueven al inicio del ámbito, por lo que se pueden llamar antes de su declaración.</p>
+<p><strong>Código:</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource {javascript} number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href="#cb7-1"></a>saludar(); // "Hola"</span>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a>    function saludar() {</span>
+<span id="cb7-4"><a href="#cb7-4"></a>      console.log("Hola");</span>
+<span id="cb7-5"><a href="#cb7-5"></a>    }</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="coerción-truthy-y-falsy" class="slide level2">
+<h2>Coerción, Truthy y Falsy:</h2>
+<p>La coerción es la conversión automática de un tipo de dato a otro. Los valores que se consideran “falsy” son aquellos que se evalúan como falso en contextos booleanos, mientras que los “truthy” son aquellos que se evalúan como verdaderos.</p>
+<p><strong>Código:</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource {javascript} number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a href="#cb8-1"></a>console.log(5 + "5"); // "55" (Coerción: número a cadena)</span>
+<span id="cb8-2"><a href="#cb8-2"></a>console.log("5" - 1); // 4 (Coerción: cadena a número)</span>
+<span id="cb8-3"><a href="#cb8-3"></a></span>
+<span id="cb8-4"><a href="#cb8-4"></a>console.log(Boolean(0)); // false (Falsy)</span>
+<span id="cb8-5"><a href="#cb8-5"></a>console.log(Boolean("")); // false (Falsy)</span>
+<span id="cb8-6"><a href="#cb8-6"></a>console.log(Boolean("Hola")); // true (Truthy)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="condicionales-else-else-if" class="slide level2">
+<h2>Condicionales, else, else if:</h2>
+<p>Las estructuras condicionales permiten ejecutar diferentes bloques de código dependiendo de una condición.</p>
+<p><strong>Código:</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource {javascript} number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a href="#cb9-1"></a>const edad = 18;</span>
+<span id="cb9-2"><a href="#cb9-2"></a></span>
+<span id="cb9-3"><a href="#cb9-3"></a>if (edad &lt; 18) {</span>
+<span id="cb9-4"><a href="#cb9-4"></a>  console.log("Eres menor de edad");</span>
+<span id="cb9-5"><a href="#cb9-5"></a>} else if (edad === 18) {</span>
+<span id="cb9-6"><a href="#cb9-6"></a>  console.log("Tienes 18 años");</span>
+<span id="cb9-7"><a href="#cb9-7"></a>} else {</span>
+<span id="cb9-8"><a href="#cb9-8"></a>  console.log("Eres mayor de edad");</span>
+<span id="cb9-9"><a href="#cb9-9"></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="operadores" class="slide level2">
+<h2>Operadores:</h2>
+<p>JavaScript tiene varios operadores para realizar operaciones matemáticas, comparaciones y lógicas.</p>
+<p><strong>Código:</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource {javascript} number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a href="#cb10-1"></a>let a = 5;</span>
+<span id="cb10-2"><a href="#cb10-2"></a>let b = 3;</span>
+<span id="cb10-3"><a href="#cb10-3"></a></span>
+<span id="cb10-4"><a href="#cb10-4"></a>console.log(a + b); // Suma: 8</span>
+<span id="cb10-5"><a href="#cb10-5"></a>console.log(a - b); // Resta: 2</span>
+<span id="cb10-6"><a href="#cb10-6"></a>console.log(a * b); // Multiplicación: 15</span>
+<span id="cb10-7"><a href="#cb10-7"></a>console.log(a / b); // División: 1.6666666666666667</span>
+<span id="cb10-8"><a href="#cb10-8"></a>console.log(a % b); // Módulo: 2</span>
+<span id="cb10-9"><a href="#cb10-9"></a>console.log(a === b); // Igualdad estricta: false</span>
+<span id="cb10-10"><a href="#cb10-10"></a>console.log(a &gt; b); // Mayor que: true</span>
+<span id="cb10-11"><a href="#cb10-11"></a>console.log(a &amp;&amp; b); // AND lógico: 3 (valor de b)</span>
+<span id="cb10-12"><a href="#cb10-12"></a>console.log(a || b); // OR lógico: 5 (valor de a)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="switch" class="slide level2">
+<h2>Switch:</h2>
+<p>La declaración switch permite evaluar una expresión y ejecutar diferentes bloques de código según el valor de la expresión.</p>
+<p><strong>Código:</strong></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource {javascript} number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a href="#cb11-1"></a></span>
+<span id="cb11-2"><a href="#cb11-2"></a>const diaSemana = 3;</span>
+<span id="cb11-3"><a href="#cb11-3"></a>let mensaje;</span>
+<span id="cb11-4"><a href="#cb11-4"></a></span>
+<span id="cb11-5"><a href="#cb11-5"></a>switch (diaSemana) {</span>
+<span id="cb11-6"><a href="#cb11-6"></a>  case 1:</span>
+<span id="cb11-7"><a href="#cb11-7"></a>    mensaje = "Lunes";</span>
+<span id="cb11-8"><a href="#cb11-8"></a>    break;</span>
+<span id="cb11-9"><a href="#cb11-9"></a>  case 2:</span>
+<span id="cb11-10"><a href="#cb11-10"></a>    mensaje = "Martes";</span>
+<span id="cb11-11"><a href="#cb11-11"></a>    break;</span>
+<span id="cb11-12"><a href="#cb11-12"></a>  case 3:</span>
+<span id="cb11-13"><a href="#cb11-13"></a>    mensaje = "Miércoles";</span>
+<span id="cb11-14"><a href="#cb11-14"></a>    break;</span>
+<span id="cb11-15"><a href="#cb11-15"></a>  case 4:</span>
+<span id="cb11-16"><a href="#cb11-16"></a>    mensaje = "Jueves";</span>
+<span id="cb11-17"><a href="#cb11-17"></a>    break;</span>
+<span id="cb11-18"><a href="#cb11-18"></a>  case 5:</span>
+<span id="cb11-19"><a href="#cb11-19"></a>    mensaje = "Viernes";</span>
+<span id="cb11-20"><a href="#cb11-20"></a>    break;</span>
+<span id="cb11-21"><a href="#cb11-21"></a>  default:</span>
+<span id="cb11-22"><a href="#cb11-22"></a>    mensaje = "Fin de semana";</span>
+<span id="cb11-23"><a href="#cb11-23"></a>    break;</span>
+<span id="cb11-24"><a href="#cb11-24"></a>}</span>
+<span id="cb11-25"><a href="#cb11-25"></a></span>
+<span id="cb11-26"><a href="#cb11-26"></a>console.log(mensaje); // "Miércoles"</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="loops" class="slide level2">
+<h2>Loops:</h2>
+<p>Los bucles permiten repetir la ejecución de un bloque de código hasta que se cumpla una condición.</p>
+<p><strong>Código:</strong></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource {javascript} number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a href="#cb12-1"></a>// Bucle while</span>
+<span id="cb12-2"><a href="#cb12-2"></a>let contador = 0;</span>
+<span id="cb12-3"><a href="#cb12-3"></a></span>
+<span id="cb12-4"><a href="#cb12-4"></a>while (contador &lt; 5) {</span>
+<span id="cb12-5"><a href="#cb12-5"></a>  console.log(contador);</span>
+<span id="cb12-6"><a href="#cb12-6"></a>  contador++;</span>
+<span id="cb12-7"><a href="#cb12-7"></a>}</span>
+<span id="cb12-8"><a href="#cb12-8"></a></span>
+<span id="cb12-9"><a href="#cb12-9"></a>// Bucle for</span>
+<span id="cb12-10"><a href="#cb12-10"></a>for (let i = 0; i &lt; 5; i++) {</span>
+<span id="cb12-11"><a href="#cb12-11"></a>  console.log(i);</span>
+<span id="cb12-12"><a href="#cb12-12"></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="arrays" class="slide level2">
+<h2>Arrays:</h2>
+<p>Los arrays son estructuras de datos que permiten almacenar múltiples valores en una sola variable.</p>
+<p><strong>Código:</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource {javascript} number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a href="#cb13-1"></a>const numeros = [1, 2, 3, 4, 5];</span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a>console.log(numeros[2]); // Acceder al elemento en la posición 2</span>
+<span id="cb13-4"><a href="#cb13-4"></a></span>
+<span id="cb13-5"><a href="#cb13-5"></a>numeros.push(6); // Agregar un elemento al final del array</span>
+<span id="cb13-6"><a href="#cb13-6"></a></span>
+<span id="cb13-7"><a href="#cb13-7"></a>console.log(numeros.length); // Longitud del array</span>
+<span id="cb13-8"><a href="#cb13-8"></a></span>
+<span id="cb13-9"><a href="#cb13-9"></a>for (let i = 0; i &lt; numeros.length; i++) {</span>
+<span id="cb13-10"><a href="#cb13-10"></a>  console.log(numeros[i]);</span>
+<span id="cb13-11"><a href="#cb13-11"></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="métodos" class="slide level2">
+<h2>Métodos:</h2>
+<p>Los métodos son funciones predefinidas que se pueden utilizar en los arrays para realizar operaciones específicas.</p>
+<p><strong>Código:</strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource {javascript} number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a href="#cb14-1"></a>const numeros = [1, 2, 3, 4, 5];</span>
+<span id="cb14-2"><a href="#cb14-2"></a></span>
+<span id="cb14-3"><a href="#cb14-3"></a>// Método Filter: Filtra elementos que cumplan una condición</span>
+<span id="cb14-4"><a href="#cb14-4"></a>const numerosPares = numeros.filter((num) =&gt; num % 2 === 0);</span>
+<span id="cb14-5"><a href="#cb14-5"></a>console.log(numerosPares); // [2, 4]</span>
+<span id="cb14-6"><a href="#cb14-6"></a></span>
+<span id="cb14-7"><a href="#cb14-7"></a>// Método Map: Crea un nuevo array aplicando una función a cada elemento</span>
+<span id="cb14-8"><a href="#cb14-8"></a>const numerosDobles = numeros.map((num) =&gt; num * 2);</span>
+<span id="cb14-9"><a href="#cb14-9"></a>console.log(numerosDobles); // [2, 4, 6, 8, 10]</span>
+<span id="cb14-10"><a href="#cb14-10"></a></span>
+<span id="cb14-11"><a href="#cb14-11"></a>// Método Find: Encuentra el primer elemento que cumpla una condición</span>
+<span id="cb14-12"><a href="#cb14-12"></a>const numeroMayor3 = numeros.find((num) =&gt; num &gt; 3);</span>
+<span id="cb14-13"><a href="#cb14-13"></a>console.log(numeroMayor3); // 4</span>
+<span id="cb14-14"><a href="#cb14-14"></a></span>
+<span id="cb14-15"><a href="#cb14-15"></a>// Método forEach: Itera sobre cada elemento del array</span>
+<span id="cb14-16"><a href="#cb14-16"></a>numeros.forEach((num) =&gt; {</span>
+<span id="cb14-17"><a href="#cb14-17"></a>  console.log(num);</span>
+<span id="cb14-18"><a href="#cb14-18"></a>});</span>
+<span id="cb14-19"><a href="#cb14-19"></a></span>
+<span id="cb14-20"><a href="#cb14-20"></a>// Método Some: Verifica si al menos un elemento cumple una condición</span>
+<span id="cb14-21"><a href="#cb14-21"></a>const hayNumerosNegativos = numeros.some((num) =&gt; num &lt; 0);</span>
+<span id="cb14-22"><a href="#cb14-22"></a>console.log(hayNumerosNegativos); // false</span>
+<span id="cb14-23"><a href="#cb14-23"></a></span>
+<span id="cb14-24"><a href="#cb14-24"></a>// Método Every: Verifica si todos los elementos cumplen una condición</span>
+<span id="cb14-25"><a href="#cb14-25"></a>const todosNumerosPositivos = numeros.every((num) =&gt; num &gt; 0);</span>
+<span id="cb14-26"><a href="#cb14-26"></a>console.log(todosNumerosPositivos); // true</span>
+<span id="cb14-27"><a href="#cb14-27"></a></span>
+<span id="cb14-28"><a href="#cb14-28"></a>// Método Reduce: Aplica una función acumuladora a todos los elementos</span>
+<span id="cb14-29"><a href="#cb14-29"></a>const sumaTotal = numeros.reduce((acumulador, num) =&gt; acumulador + num, 0);</span>
+<span id="cb14-30"><a href="#cb14-30"></a>console.log(sumaTotal); // 15</span>
+<span id="cb14-31"><a href="#cb14-31"></a></span>
+<span id="cb14-32"><a href="#cb14-32"></a>// Método Includes: El método `includes` verifica si un elemento está presente en el array.</span>
+<span id="cb14-33"><a href="#cb14-33"></a></span>
+<span id="cb14-34"><a href="#cb14-34"></a>const numeros = [1, 2, 3, 4, 5];</span>
+<span id="cb14-35"><a href="#cb14-35"></a></span>
+<span id="cb14-36"><a href="#cb14-36"></a>console.log(numeros.includes(3)); // true</span>
+<span id="cb14-37"><a href="#cb14-37"></a>console.log(numeros.includes(6)); // false</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="objects" class="slide level2">
+<h2>Objects:</h2>
+<p>Los objetos en JavaScript son estructuras de datos que pueden contener propiedades y métodos. Se pueden crear utilizando una función constructora.</p>
+<p><strong>Código:</strong></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource {javascript} number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a href="#cb15-1"></a>// Definición de una función constructora</span>
+<span id="cb15-2"><a href="#cb15-2"></a>function Persona(nombre, edad) {</span>
+<span id="cb15-3"><a href="#cb15-3"></a>  this.nombre = nombre;</span>
+<span id="cb15-4"><a href="#cb15-4"></a>  this.edad = edad;</span>
+<span id="cb15-5"><a href="#cb15-5"></a>}</span>
+<span id="cb15-6"><a href="#cb15-6"></a></span>
+<span id="cb15-7"><a href="#cb15-7"></a>// Creación de objetos utilizando la función constructora</span>
+<span id="cb15-8"><a href="#cb15-8"></a>const persona1 = new Persona("Juan", 25);</span>
+<span id="cb15-9"><a href="#cb15-9"></a>const persona2 = new Persona("María", 30);</span>
+<span id="cb15-10"><a href="#cb15-10"></a></span>
+<span id="cb15-11"><a href="#cb15-11"></a>console.log(persona1.nombre); // "Juan"</span>
+<span id="cb15-12"><a href="#cb15-12"></a>console.log(persona2.edad); // 30</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="tarea" class="slide level2">
+<h2>Tarea</h2>
+<p><strong>Tipos de Datos Primitivos:</strong></p>
+<p><strong>Ejercicio 1:</strong> Conversión de tipos</p>
+<p>En este ejercicio, se solicita al usuario que ingrese un número como cadena de texto, se convierte a tipo de dato numérico y se realiza una operación matemática.</p>
+<p><strong>Ejercicio 2: Verificación de tipo de dato</strong></p>
+<p>En este ejercicio, se solicita al usuario que ingrese un valor y se muestra en la consola el tipo de dato utilizando el operador typeof.</p>
+<p><strong>TypeOf</strong></p>
+<p><strong>Ejercicio 1:</strong> Verificación de tipo de variable</p>
+<p>En este ejercicio, se declara una variable con un valor y se muestra en la consola el tipo de dato utilizando el operador typeof.</p>
+<p><strong>Ejercicio 2:</strong> Verificación de tipo de argumento de función</p>
+<p>En este ejercicio, se define una función que recibe un argumento y se muestra en la consola el tipo de dato utilizando el operador typeof.</p>
+<p><strong>Variables, Declaración, Inicialización, console.log</strong></p>
+<p><strong>Ejercicio 1:</strong> Operaciones con variables</p>
+<p>En este ejercicio, se declaran dos variables, se les asignan valores y se realiza una operación matemática con ellas. El resultado se muestra en la consola.</p>
+<p><strong>Ejercicio 2:</strong> Concatenación de variables y texto</p>
+<p>En este ejercicio, se declaran variables con valores de cadena de texto y se realiza la concatenación de ellas con texto adicional. El resultado se muestra en la consola.</p>
+<p><strong>Funciones</strong></p>
+<p><strong>Ejercicio 1:</strong> Suma de dos números utilizando function declaration</p>
+<p>En este ejercicio, se define una función utilizando function declaration que recibe dos números, los suma y devuelve el resultado. Se realiza la llamada a la función y se muestra el resultado en la consola.</p>
+<p><strong>Ejercicio 2:</strong> Cálculo del área de un triángulo utilizando function expression (función anónima)</p>
+<p>En este ejercicio, se utiliza una función expresiva o función anónima para calcular el área de un triángulo. La función recibe la base y la altura como parámetros, realiza el cálculo del área y devuelve el resultado. Se realiza la llamada a la función y se muestra el resultado en la consola.</p>
+<p><strong>Ejercicio 1:</strong> Acceso a variables dentro y fuera de una función</p>
+<p>En este ejercicio, se declara una variable global y una variable local dentro de una función. Se muestra en la consola el valor de ambas variables tanto dentro como fuera de la función para observar el alcance de cada una.</p>
+<p><strong>Ejercicio 2:</strong> Acceso a variables con el mismo nombre en diferentes ámbitos</p>
+<p>En este ejercicio, se declara una variable con el mismo nombre en el ámbito global y en una función. Se muestra en la consola el valor de ambas variables para observar cómo se accede a ellas y cuál prevalece en cada contexto.</p>
+<p>¡Espero que estos ejercicios te ayuden a comprender y practicar los conceptos de JavaScript de manera más práctica! Recuerda probar diferentes escenarios y realizar modificaciones para obtener un mayor entendimiento de cada tema.</p>
 <p><img src="img/logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><a href="https://espe.edu.ec" class="uri">https://espe.edu.ec</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
