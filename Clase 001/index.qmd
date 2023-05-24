@@ -1,0 +1,104 @@
+---
+title: "Desarrollo Web para Integraciones"
+subtitle: "Actualización del Syllabus"
+date: "today"
+author: "Lic. Diego Medardo Saavedra García Mg. Sc."
+lang: "es"
+format:
+  revealjs:
+    #chalkboard: 
+      #buttons: false
+    toc: true
+    incremental: false
+    slide-number: true
+    preview-links: auto
+    logo: img/logo.png
+    footer: <https://espe.edu.ec>
+    theme: dark
+    makeindex: true
+    multiplex: true
+    transition: fade
+    chalkboard: true #Pizarra
+    auto-stretch: false
+    smaller: false
+    scrollable: true
+    #presentation-title-slide-text-alig: left
+    presentation-slide-text-align: center
+    menu: true
+    codeBlock: {data-trim: true}
+    execute: true
+    executeCode: true
+  #html: 
+    
+    #code-fold: true
+    #html-math-method: katex
+    #multiplex: true
+    #transition: fade
+    #auto-stretch: false
+bibliography: Bibliografia.bib
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
+editor_options: 
+  chunk_output_type: console
+---
+
+# Actualización del Pensum de Estudios: 
+
+## Beneficios de las Tecnologías Modernas en el Desarrollo Web.
+
+## Objetivo Principal.
+
+* Desarrollar habilidades y competencias integrales en el campo del desarrollo web, utilizando tecnologías modernas y ampliamente utilizadas, así como comprender y aplicar los principios y fundamentos de las arquitecturas MVC y las diferentes tecnologías mencionadas en el aprendizaje.
+
+Explicación del Objetivo:
+  
+  El objetivo principal es lograr una formación completa y sólida en el desarrollo de aplicaciones web dinámicas, abarcando tanto el frontend como el backend, utilizando tecnologías modernas y populares en la industria. 
+  
+  Esto permitirá a los estudiantes adquirir las habilidades necesarias para diseñar, desarrollar y mantener aplicaciones web escalables, eficientes e interactivas, y así estar preparados para enfrentar los desafíos actuales del mercado laboral en el ámbito del desarrollo web. Además, comprender y aplicar los principios de las arquitecturas MVC y utilizar herramientas como JPA y Hibernate en el contexto de bases de datos relacionales brindará a los estudiantes una base sólida para el desarrollo de aplicaciones web robustas y con un buen rendimiento. 
+  
+  En resumen, el objetivo principal es formar profesionales competentes y capacitados para afrontar los retos y demandas de la industria del desarrollo web utilizando tecnologías modernas y en constante evolución.
+
+
+## Tecnologías clave en el desarrollo web moderno
+
+- Node.js
+- Express.js
+- MongoDB
+- EJS
+- Passport.js
+- React.js
+- Spring Boot
+- JPA (Java Persistence API)
+
+## Ventajas de actualizar el pensum de estudios con tecnologías modernas
+    
+1. Eficiencia y rendimiento mejorados
+
+1.1. Node.js y Express.js permiten construir aplicaciones web escalables y de alta eficiencia.
+
+1.2. MongoDB ofrece un rendimiento rápido y una escalabilidad horizontal para gestionar grandes volúmenes de datos.
+
+2. Desarrollo ágil y productividad
+
+2.1. Tecnologías modernas como React.js, facilitan el desarrollo de interfaces de usuario interactivas y componentes reutilizables.
+
+2.2. Spring Boot simplifica el desarrollo de aplicaciones Java, acelerando el proceso de desarrollo y reduciendo la carga de trabajo.
+
+3. Flexibilidad y adaptabilidad
+
+3.1. El uso de tecnologías como EJS, Passport.js y JPA permiten adaptarse a diferentes requisitos de proyectos y ofrecen opciones flexibles para la autenticación de usuarios, la generación de vistas dinámicas y el manejo de bases de datos.
+
+## Amplias oportunidades profesionales
+
+- El conocimiento de tecnologías modernas y arquitecturas de desarrollo web en demanda, como las mencionadas abre numerosas oportunidades profesionales en la industria del desarrollo de software.
+
+- Destacar la importancia de mantenerse actualizado y competitivo en el mercado laboral en constante evolución.
+
+## Resumen y conclusión
+
+### Resumen
+- Ventajas del uso de tecnologías modernas y su relevancia en el desarrollo web actual.
+
+### Conclusión
+- Importancia de actualizar el pensum de estudios para aprovechar los beneficios de las tecnologías modernas y prepararse para una exitosa carrera en el desarrollo web.
+
+## Preguntas y Respuestas
