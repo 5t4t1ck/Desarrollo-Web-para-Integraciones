@@ -1,0 +1,412 @@
+---
+title: "Ejercicios con JavaScript"
+subtitle: "Desarrollo Web para Integraciones"
+date: "today"
+author: "Lic. Diego Medardo Saavedra García Mg. Sc."
+lang: "es"
+format:
+  revealjs:
+    #chalkboard: 
+      #buttons: false
+    toc: true
+    incremental: false
+    slide-number: true
+    preview-links: auto
+    logo: img/logo.png
+    footer: <https://espe.edu.ec>
+    theme: dark
+    makeindex: true
+    multiplex: true
+    transition: fade
+    chalkboard: true #Pizarra
+    auto-stretch: false
+    smaller: false
+    scrollable: true
+    #presentation-title-slide-text-alig: left
+    presentation-slide-text-align: center
+    menu: true
+    codeBlock: {data-trim: true}
+    execute: true
+    executeCode: true
+  #html: 
+    
+    #code-fold: true
+    #html-math-method: katex
+    #multiplex: true
+    #transition: fade
+    #auto-stretch: false
+bibliography: Bibliografia.bib
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
+editor_options: 
+  chunk_output_type: console
+---
+
+# Ejercicios con JavaScript
+
+A continuación se presentan una serie de ejercicios para reforzar lo que hemos aprendido acerca del lenguaje JavaScript.
+
+## Tipos de Datos Primitivos:
+
+Los tipos de datos primitivos en JavaScript incluyen números, cadenas de texto y valores booleanos (verdadero o falso).
+
+**Código:**
+```{javascript}
+// Ejemplo de números
+let numero = 10;
+console.log(numero);
+
+// Ejemplo de cadena de texto
+let texto = "Hola, mundo!";
+console.log(texto);
+
+// Ejemplo de valor booleano
+let booleano = true;
+console.log(booleano);
+```
+## TypeOf:
+
+El operador typeof se utiliza para determinar el tipo de dato de una variable.
+
+**Código:**
+```{javascript}
+let numero = 10;
+let texto = "Hola, mundo!";
+let booleano = true;
+
+console.log(typeof numero);   // Devuelve "number"
+console.log(typeof texto);    // Devuelve "string"
+console.log(typeof booleano); // Devuelve "boolean"
+```
+
+## Variables, Declaración, Inicialización, console.log:
+
+En JavaScript, se pueden declarar variables utilizando la palabra clave let o const. La inicialización asigna un valor a la variable y console.log se utiliza para imprimir el valor en la consola.
+
+**Código:**
+```{javascript}
+let numero; // Declaración de variable
+numero = 10; // Inicialización de variable
+console.log(numero); // Imprime el valor de la variable en la consola
+
+const texto = "Hola, mundo!"; // Declaración e inicialización de una constante
+console.log(texto);
+````
+## Funciones 
+
+Las funciones son bloques de código reutilizables que pueden recibir argumentos, realizar operaciones y devolver un valor utilizando la declaración return.
+
+**Código:**
+```{javascript}
+// Function Declaration
+function suma(a, b) {
+  return a + b;
+}
+
+console.log(suma(2, 3)); // Llamada a una función
+
+// Function Expression (Funciones anónimas)
+const resta = function(a, b) {
+  return a - b;
+};
+
+console.log(resta(5, 2)); // Llamada a una función
+```
+## Scope, Scope Local, Scope Global.
+
+El scope determina la accesibilidad y visibilidad de las variables en diferentes partes del código. Las variables declaradas dentro de una función tienen alcance local, mientras que las variables declaradas fuera de cualquier función tienen alcance global.
+
+**Código:**
+```{javascript}
+// Scope Local
+function suma(a, b) {
+  const resultado = a + b;
+  console.log(resultado); // La variable resultado solo es accesible dentro de la función
+}
+
+suma(2, 3);
+
+// Scope Global
+const mensaje = "Hola, mundo!"; // La variable mensaje es global
+
+function imprimirMensaje() {
+  console.log(mensaje); // La función puede acceder a la variable global
+}
+
+imprimirMensaje();
+```
+## Hoisting, hoisting en variables, hoisting en funciones:
+
+El Hoisting es un comportamiento en JavaScript en el cual las declaraciones de variables y funciones se mueven al inicio del ámbito en el que están definidas durante la fase de compilación del código.
+
+**Hoisting en variables:**
+
+Las declaraciones de variables se mueven al inicio del ámbito, pero no las inicializaciones.
+        
+**Código:**
+
+```{javascript}
+
+console.log(nombre); // Undefined
+var nombre = "Juan";
+console.log(nombre); // "Juan"
+```
+
+**Hoisting en funciones:**
+
+Las declaraciones de funciones completas se mueven al inicio del ámbito, por lo que se pueden llamar antes de su declaración.
+
+**Código:**
+
+```{javascript}
+saludar(); // "Hola"
+
+    function saludar() {
+      console.log("Hola");
+    }
+```
+
+## Coerción, Truthy y Falsy:
+
+La coerción es la conversión automática de un tipo de dato a otro. Los valores que se consideran "falsy" son aquellos que se evalúan como falso en contextos booleanos, mientras que los "truthy" son aquellos que se evalúan como verdaderos.
+
+**Código:**
+
+```{javascript}
+console.log(5 + "5"); // "55" (Coerción: número a cadena)
+console.log("5" - 1); // 4 (Coerción: cadena a número)
+
+console.log(Boolean(0)); // false (Falsy)
+console.log(Boolean("")); // false (Falsy)
+console.log(Boolean("Hola")); // true (Truthy)
+```
+
+## Condicionales, else, else if:
+
+Las estructuras condicionales permiten ejecutar diferentes bloques de código dependiendo de una condición.
+
+**Código:**
+
+```{javascript}
+const edad = 18;
+
+if (edad < 18) {
+  console.log("Eres menor de edad");
+} else if (edad === 18) {
+  console.log("Tienes 18 años");
+} else {
+  console.log("Eres mayor de edad");
+}
+```
+
+## Operadores:
+
+JavaScript tiene varios operadores para realizar operaciones matemáticas, comparaciones y lógicas.
+
+**Código:**
+
+```{javascript}
+let a = 5;
+let b = 3;
+
+console.log(a + b); // Suma: 8
+console.log(a - b); // Resta: 2
+console.log(a * b); // Multiplicación: 15
+console.log(a / b); // División: 1.6666666666666667
+console.log(a % b); // Módulo: 2
+console.log(a === b); // Igualdad estricta: false
+console.log(a > b); // Mayor que: true
+console.log(a && b); // AND lógico: 3 (valor de b)
+console.log(a || b); // OR lógico: 5 (valor de a)
+```
+
+## Switch:
+
+La declaración switch permite evaluar una expresión y ejecutar diferentes bloques de código según el valor de la expresión.
+
+**Código:**
+
+```{javascript}
+
+const diaSemana = 3;
+let mensaje;
+
+switch (diaSemana) {
+  case 1:
+    mensaje = "Lunes";
+    break;
+  case 2:
+    mensaje = "Martes";
+    break;
+  case 3:
+    mensaje = "Miércoles";
+    break;
+  case 4:
+    mensaje = "Jueves";
+    break;
+  case 5:
+    mensaje = "Viernes";
+    break;
+  default:
+    mensaje = "Fin de semana";
+    break;
+}
+
+console.log(mensaje); // "Miércoles"
+```
+
+## Loops:
+
+Los bucles permiten repetir la ejecución de un bloque de código hasta que se cumpla una condición.
+
+**Código:**
+
+```{javascript}
+// Bucle while
+let contador = 0;
+
+while (contador < 5) {
+  console.log(contador);
+  contador++;
+}
+
+// Bucle for
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+```
+
+## Arrays:
+Los arrays son estructuras de datos que permiten almacenar múltiples valores en una sola variable.
+
+**Código:**
+
+```{javascript}
+const numeros = [1, 2, 3, 4, 5];
+
+console.log(numeros[2]); // Acceder al elemento en la posición 2
+
+numeros.push(6); // Agregar un elemento al final del array
+
+console.log(numeros.length); // Longitud del array
+
+for (let i = 0; i < numeros.length; i++) {
+  console.log(numeros[i]);
+}
+```
+
+## Métodos: 
+Los métodos son funciones predefinidas que se pueden utilizar en los arrays para realizar operaciones específicas.
+
+**Código:**
+
+```{javascript}
+const numeros = [1, 2, 3, 4, 5];
+
+// Método Filter: Filtra elementos que cumplan una condición
+const numerosPares = numeros.filter((num) => num % 2 === 0);
+console.log(numerosPares); // [2, 4]
+
+// Método Map: Crea un nuevo array aplicando una función a cada elemento
+const numerosDobles = numeros.map((num) => num * 2);
+console.log(numerosDobles); // [2, 4, 6, 8, 10]
+
+// Método Find: Encuentra el primer elemento que cumpla una condición
+const numeroMayor3 = numeros.find((num) => num > 3);
+console.log(numeroMayor3); // 4
+
+// Método forEach: Itera sobre cada elemento del array
+numeros.forEach((num) => {
+  console.log(num);
+});
+
+// Método Some: Verifica si al menos un elemento cumple una condición
+const hayNumerosNegativos = numeros.some((num) => num < 0);
+console.log(hayNumerosNegativos); // false
+
+// Método Every: Verifica si todos los elementos cumplen una condición
+const todosNumerosPositivos = numeros.every((num) => num > 0);
+console.log(todosNumerosPositivos); // true
+
+// Método Reduce: Aplica una función acumuladora a todos los elementos
+const sumaTotal = numeros.reduce((acumulador, num) => acumulador + num, 0);
+console.log(sumaTotal); // 15
+
+// Método Includes: El método `includes` verifica si un elemento está presente en el array.
+
+const numeros = [1, 2, 3, 4, 5];
+
+console.log(numeros.includes(3)); // true
+console.log(numeros.includes(6)); // false
+```
+
+## Objects:
+
+Los objetos en JavaScript son estructuras de datos que pueden contener propiedades y métodos. Se pueden crear utilizando una función constructora.
+
+**Código:**
+
+```{javascript}
+// Definición de una función constructora
+function Persona(nombre, edad) {
+  this.nombre = nombre;
+  this.edad = edad;
+}
+
+// Creación de objetos utilizando la función constructora
+const persona1 = new Persona("Juan", 25);
+const persona2 = new Persona("María", 30);
+
+console.log(persona1.nombre); // "Juan"
+console.log(persona2.edad); // 30
+```
+## Tarea
+
+**Tipos de Datos Primitivos:**
+
+**Ejercicio 1:** Conversión de tipos
+
+En este ejercicio, se solicita al usuario que ingrese un número como cadena de texto, se convierte a tipo de dato numérico y se realiza una operación matemática.
+
+**Ejercicio 2: Verificación de tipo de dato**
+
+En este ejercicio, se solicita al usuario que ingrese un valor y se muestra en la consola el tipo de dato utilizando el operador typeof.
+
+**TypeOf**
+
+**Ejercicio 1:** Verificación de tipo de variable
+
+En este ejercicio, se declara una variable con un valor y se muestra en la consola el tipo de dato utilizando el operador typeof.
+
+**Ejercicio 2:** Verificación de tipo de argumento de función
+
+En este ejercicio, se define una función que recibe un argumento y se muestra en la consola el tipo de dato utilizando el operador typeof.
+
+**Variables, Declaración, Inicialización, console.log**
+
+**Ejercicio 1:** Operaciones con variables
+
+En este ejercicio, se declaran dos variables, se les asignan valores y se realiza una operación matemática con ellas. El resultado se muestra en la consola.
+
+**Ejercicio 2:** Concatenación de variables y texto
+
+En este ejercicio, se declaran variables con valores de cadena de texto y se realiza la concatenación de ellas con texto adicional. El resultado se muestra en la consola.
+
+**Funciones**
+
+**Ejercicio 1:** Suma de dos números utilizando function declaration
+
+En este ejercicio, se define una función utilizando function declaration que recibe dos números, los suma y devuelve el resultado. Se realiza la llamada a la función y se muestra el resultado en la consola.
+
+**Ejercicio 2:** Cálculo del área de un triángulo utilizando function expression (función anónima)
+
+En este ejercicio, se utiliza una función expresiva o función anónima para calcular el área de un triángulo. La función recibe la base y la altura como parámetros, realiza el cálculo del área y devuelve el resultado. Se realiza la llamada a la función y se muestra el resultado en la consola.
+
+**Ejercicio 1:** Acceso a variables dentro y fuera de una función
+
+En este ejercicio, se declara una variable global y una variable local dentro de una función. Se muestra en la consola el valor de ambas variables tanto dentro como fuera de la función para observar el alcance de cada una.
+
+**Ejercicio 2:** Acceso a variables con el mismo nombre en diferentes ámbitos
+
+En este ejercicio, se declara una variable con el mismo nombre en el ámbito global y en una función. Se muestra en la consola el valor de ambas variables para observar cómo se accede a ellas y cuál prevalece en cada contexto.
+
+¡Espero que estos ejercicios te ayuden a comprender y practicar los conceptos de JavaScript de manera más práctica! Recuerda probar diferentes escenarios y realizar modificaciones para obtener un mayor entendimiento de cada tema.
